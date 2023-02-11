@@ -1,0 +1,12 @@
+.nav__list {
+  @include list-style;
+  display: flex;
+  flex-direction: column;
+
+  &--header {
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

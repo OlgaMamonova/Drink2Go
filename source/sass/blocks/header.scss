@@ -1,5 +1,38 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $white;
+  color: $black;
+  padding: 8px 0;
+
+  @media(min-width: $tablet-width) {
+    padding: 18px 0;
+  }
 }
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-capture {
+  display: none;
+
+  @media(min-width: $desktop-width) {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.header__user-nav-list {
+  @include list-style;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header__user-nav-link {
+  display: block;
+  padding: 14px;
+}
+
