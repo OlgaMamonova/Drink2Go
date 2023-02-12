@@ -7,17 +7,15 @@
   }
 
   @media(min-width: $desktop-width) {
-    padding: 100px 0 70px;
+    padding: 100px 0 120px;
   }
 }
 
 .advantages__hint {
-  text-align: center;
   margin-bottom: 4px;
 }
 
 .advantages__title {
-  text-align: center;
   margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
@@ -81,7 +79,6 @@
 }
 
 .advantages__item-title {
-  text-align: center;
   margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
@@ -95,13 +92,8 @@
 }
 
 .advantages__item-description {
-  text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width), (max-width: $desktop-width){
     text-align: left;
-  }
-
-  @media (min-width: $desktop-width) {
-    text-align: center;
   }
 }
