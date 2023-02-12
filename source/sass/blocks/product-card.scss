@@ -11,6 +11,7 @@
 
 .product-card__img {
   display: block;
+  margin: 0 auto;
   margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
