@@ -34,6 +34,7 @@
 }
 
 .product-card__description {
+  margin: 0;
   margin-bottom: 16px;
   flex-grow: 1;
 
@@ -55,6 +56,7 @@
 
 .product-card__button {
   @include purple-button;
+  font-family: inherit;
   font-size: 14px;
   line-height: 20px;
   padding: 8px 20px 8px 46px;

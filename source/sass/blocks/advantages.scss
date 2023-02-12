@@ -22,7 +22,7 @@
     margin-bottom: 60px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 80px;
   }
 }
@@ -33,6 +33,7 @@
   gap: 32px;
 
   @media (min-width: $tablet-width) {
+    padding: 0 10px;
     grid-template-columns: 339px 339px;
     gap: 50px 30px;
   }
@@ -92,8 +93,16 @@
 }
 
 .advantages__item-description {
+  margin: 0;
+  text-align: center;
 
-  @media (min-width: $tablet-width), (max-width: $desktop-width){
+  @media (min-width: $tablet-width){
     text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width){
+    text-align: center;
   }
 }
