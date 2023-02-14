@@ -142,41 +142,38 @@
               <legend class="catalog__filter-title">
                 Цена
               </legend>
-              <div class="catalog__range-wrapper-toggle">
-                <div class="catalog__range-scale">
-                  <div class="catalog__range-bar" style="left: 24px; width: 72px">
-                    <button class="catalog__range-toggle catalog__range-toggle--min" type="button">
-                      <span class="visually-hidden"
-                        >Изменить минимальную цену.</span
-                      >
-                    </button>
-                    <button class="catalog__range-toggle catalog__range-toggle--max" type="button">
-                      <span class="visually-hidden"
-                        >Изменить максимальную цену.</span
-                      >
-                    </button>
-                  </div>
+              <div class="catalog__range-scale">
+                <div class="catalog__range-bar" style="left: 12px; width: 86%">
+                  <button class="catalog__range-toggle catalog__range-toggle--min" type="button">
+                    <span class="visually-hidden"
+                      >Изменить минимальную цену.</span
+                    >
+                  </button>
+                  <button class="catalog__range-toggle catalog__range-toggle--max" type="button">
+                    <span class="visually-hidden"
+                      >Изменить максимальную цену.</span
+                    >
+                  </button>
                 </div>
               </div>
-              <div class="catalog__range-price">
-                <div class="catalog__range-wrapper-inputs">
-                  <label class="visually-hidden" for="min-price">минимальная цена</label>
-                  <input
-                      class="catalog__range-input"
-                      type="number"
-                      placeholder="0"
-                      name="min-price"
-                      id="min-price"
-                    />
-                    <label class="visually-hidden" for="max-price">минимальная цена</label>
-                    <input
-                      class="catalog__range-input"
-                      type="number"
-                      value="900"
-                      name="max-price"
-                      id="max-price"
-                    />
-                </div>
+              <div class="catalog__range-wrapper-inputs">
+                <label class="visually-hidden" for="min-price">минимальная цена</label>
+                <input
+                    class="catalog__range-input"
+                    type="number"
+                    placeholder="0"
+                    name="min-price"
+                    id="min-price"
+                />
+                <span class="catalog__range-input-separator"></span>
+                <label class="visually-hidden" for="max-price">минимальная цена</label>
+                <input
+                    class="catalog__range-input"
+                    type="number"
+                    value="900"
+                    name="max-price"
+                    id="max-price"
+                />
               </div>
             </fieldset>
             <fieldset class="catalog__filter-group">

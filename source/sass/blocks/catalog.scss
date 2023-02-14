@@ -40,6 +40,7 @@
 
 .catalog__filter-group {
   border: none;
+  padding: 0;
 }
 
 .catalog__filter-title {
@@ -51,6 +52,95 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
   }
+}
+
+.catalog__range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog__range-input-separator {
+  width: 9px;
+  height: 2px;
+  background-color: $grey
+}
+
+.catalog__range-input {
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 7px 10px;
+  width: 118px;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary-darker;
+  }
+
+  &:disabled {
+    border-color: $grey-light;
+  }
+}
+
+.catalog__range-scale {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: $grey-light;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.catalog__range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: $primary-lighter;
+}
+
+.catalog__range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 2px solid $white;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 0 0 2px $primary-lighter;
+  transition: all 0.2s ease-out;
+
+  &--min {
+    left: -12px;
+    top: -9px;
+  }
+
+  &--max {
+    left: 95%;
+    top: -9px;
+  }
+
+  &:focus-visible,
+  &:hover {
+    outline: none;
+    background-color: $primary-lightest;
+  }
+
+  &:active {
+    background-color: $primary;
+    box-shadow: 0 0 0 2px $primary;
+  }
+
 }
 
 .catalog__filter-list {
