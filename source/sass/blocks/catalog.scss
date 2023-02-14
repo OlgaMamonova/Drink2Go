@@ -37,3 +37,167 @@
     grid-template-columns: 317px 317px 317px;
   }
 }
+
+.catalog__filter-group {
+  border: none;
+}
+
+.catalog__filter-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog__filter-list {
+  @include list-style;
+}
+
+.catalog__filter-item {
+  margin-bottom: 21.5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog__control {
+  position: relative;
+  cursor: pointer;
+
+  &--radio {
+    padding-left: 34px;
+  }
+
+  &--checkbox {
+    padding-left: 52px;
+  }
+}
+
+.catalog__label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.catalog__radio-mark {
+  position: absolute;
+  margin-left: -34px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 2px solid $grey;
+  transition: all 0.2s ease-out;
+}
+
+.catalog__radio-mark::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: inherit;
+  transition: all 0.2s ease-out;
+}
+
+.catalog__input:hover + .catalog__radio-mark {
+  border-color: $primary;
+}
+
+.catalog__input:hover + .catalog__radio-mark::after {
+  background-color: $secondary;
+}
+
+.catalog__input:checked + .catalog__radio-mark {
+  border-color: $primary;
+}
+
+.catalog__input:checked + .catalog__radio-mark::after {
+  background-color: $primary;
+}
+
+.catalog__input:checked:disabled + .catalog__radio-mark {
+  border-color: $grey;
+}
+
+.catalog__input:checked:disabled + .catalog__radio-mark::after {
+  background-color: $grey-light;
+}
+
+.catalog__input:checked:disabled ~ .catalog__label {
+  color: $grey-light;
+}
+
+.catalog__input:disabled + .catalog__radio-mark {
+  border-color: $grey-light;
+}
+
+.catalog__input:disabled ~ .catalog__label {
+  color: $grey-light;
+}
+
+.catalog__input:disabled:hover + .catalog__radio-mark {
+  border-color: $grey-light;
+}
+
+.catalog__input:disabled:hover ~ .catalog__label {
+  color: $grey-light;
+}
+
+.catalog__input:disabled:hover + .catalog__radio-mark::after {
+  background-color: $white;
+}
+
+.catalog__checkbox-mark {
+  position: absolute;
+  margin-left: -52px;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $grey;
+  border: 2px solid $grey;
+  transition: all 0.2s ease-out;
+}
+
+.catalog__checkbox-mark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $white;
+  transition: all 0.2s ease-out;
+}
+
+.catalog__input:focus + .catalog__checkbox-mark,
+.catalog__input:hover + .catalog__checkbox-mark  {
+  border-color: $primary;
+  background-color: $primary-lightest;
+}
+
+.catalog__input:checked + .catalog__checkbox-mark {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.catalog__input:checked + .catalog__checkbox-mark::after {
+  left: 18px;
+}
+
+.catalog__input:disabled + .catalog__checkbox-mark {
+  background-color: $grey-light;
+  border-color: $grey-light;
+}
+
+.catalog__input:checked:disabled + .catalog__checkbox-mark::after {
+  background-color: $grey;
+  left: 18px;
+}
