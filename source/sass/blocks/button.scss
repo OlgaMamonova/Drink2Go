@@ -1,0 +1,68 @@
+.button {
+  background-color: $primary;
+  color: $white;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  width: fit-content;
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:focus-visible,
+  &:hover {
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $grey;
+  }
+
+  &--add {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 9px 5px;
+  }
+
+  &--cart {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 20px 8px 46px;
+    background-image: url("../../img/background/cart.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+    background-position: left 20px top 10px;
+  }
+
+  &--reset {
+    background-color: $white;
+    color: $primary;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 9px 5px;
+
+    &:focus-visible,
+    &:hover {
+      color: $white;
+      background-color: $primary-lighter;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $grey;
+      color: $white;
+    }
+  }
+}
