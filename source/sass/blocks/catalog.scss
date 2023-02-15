@@ -126,7 +126,7 @@
   }
 
   &--max {
-    left: 95%;
+    left: 100%;
     top: -9px;
   }
 
@@ -290,4 +290,20 @@
 .catalog__input:checked:disabled + .catalog__checkbox-mark::after {
   background-color: $grey;
   left: 18px;
+}
+
+.catalog__sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.catalog__sorting-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
 }
