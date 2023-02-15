@@ -156,6 +156,14 @@
   &:disabled {
     border-color: $grey-light;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
 }
 
 .catalog__range-scale {

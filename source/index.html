@@ -35,7 +35,7 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">
+              <a class="header__nav-link header__nav-link--current" href="#">
                 Главная
               </a>
             </li>
@@ -90,6 +90,7 @@
       </div>
     </header>
     <main class="main">
+      <section class="promo"></section>
       <section class="advantages">
         <div class="container">
           <span class="advantages__hint hint">преимущества</span>
@@ -443,8 +444,18 @@
           </div>
         </div>
       </section>
+      <section class="map">
+        <div class="map__leaflet" id="map"></div>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x">
+          <img class="map__img" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="324" height="420" alt="Адрес на карте">
+        </picture>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+
+    </footer>
     <script src="./js/script.js" type="module"></script>
   </body>
 </html>
