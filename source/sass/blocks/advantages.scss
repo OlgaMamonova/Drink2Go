@@ -2,11 +2,11 @@
   background-color: $white;
   padding: 50px 0 60px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 60px 0 100px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 100px 0 120px;
   }
 }
@@ -96,13 +96,13 @@
   margin: 0;
   text-align: center;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     text-align: left;
     font-size: 16px;
     line-height: 24px;
   }
 
-  @media (min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     text-align: center;
   }
 }
