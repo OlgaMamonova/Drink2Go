@@ -296,6 +296,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 10px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
@@ -306,4 +307,33 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+}
+
+.catalog__select-group {
+  width: fit-content;
+  padding: 4px 30px 4px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $primary;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-image: url("../../img/background/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+  appearance: none;
+  box-sizing: border-box;
+
+  &:focus-visible,
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:active {
+    background-image: url("../../img/background/arrow-up.svg");
+  }
 }
