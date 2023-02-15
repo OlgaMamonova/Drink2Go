@@ -1,5 +1,249 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $white;
+  color: $black;
+  position: relative;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__logo-img {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.header__logo-capture {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    width: 126px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 162px;
+  }
+}
+
+.header__nav {
+  display: none;
+
+  &--menu-opened {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    z-index: 1;
+    background-color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.header__nav-list {
+  @include list-style;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 500px;
+  }
+}
+
+.header__nav-link {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $black;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px 0 21px;
+  text-align: center;
+
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    padding: 32px 21px;
+    width: fit-content;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $primary;
+    outline: none;
+  }
+
+  &:active {
+    color: $primary;
+    background-color: $secondary;
+  }
+}
+
+.header__user-nav {
+  margin-left: auto;
+}
+
+.header__user-nav-list {
+  @include list-style;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header__user-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 20px;
+  }
+
+  &:active {
+    background-color: $secondary;
+    color: $primary;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $primary;
+    outline: none;
+  }
+}
+
+.header__user-nav-icon {
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
+}
+
+.header__user-nav-capture {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.header__burger-toggle {
+  background-color: inherit;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__burger-line {
+  width: 16px;
+  height: 1.5px;
+  background-color: $black;
+  position: absolute;
+  left: 22px;
+
+  &--first {
+    top: 24px;
+  }
+
+  &--second {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--third {
+    bottom: 24px;
+  }
+
+  &--fourth {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.header__burger-toggle--menu-opened .header__burger-line:nth-of-type(2n+1) {
+  opacity: 0;
+}
+
+.header__burger-toggle--menu-opened .header__burger-line:nth-of-type(2) {
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.header__burger-toggle--menu-opened .header__burger-line:nth-of-type(4) {
+  transform: translateY(-50%) rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+
+.header__burger-toggle:active {
+  background-color: $secondary;
+}
+
+.header__burger-toggle:focus-visible {
+  outline: none;
+}
+
+.header__burger-toggle:hover .header__burger-line,
+.header__burger-toggle:focus-visible .header__burger-line {
+  background-color: $primary;
 }
