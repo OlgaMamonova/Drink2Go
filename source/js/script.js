@@ -53,5 +53,19 @@ const initMap = () => {
   mainPinMarker.addTo(map);
 }
 
+const initSlider = () => {
+  new Swiper('.promo__slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
+
 initBurger();
 initMap();
+initSlider();

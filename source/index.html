@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   </head>
   <body class="page__body">
     <header class="header">
@@ -93,6 +97,117 @@
     <main class="main">
       <section class="promo">
         <h2 class="visually-hidden">Презентация новинок</h2>
+        <div class="promo__slider swiper">
+          <div class="promo__wrapper swiper-wrapper">
+            <div class="promo__slide promo__slide--flat-white swiper-slide">
+              <div class="promo__slide-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/slider/coffee-can-1-desktop.png 1x,
+                    img/slider/coffee-can-1-desktop@2x.png 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/slider/coffee-can-1-tablet.png 1x,
+                    img/slider/coffee-can-1-tablet@2x.png 2x"
+                  />
+                  <img
+                    class="promo__img"
+                    src="img/slider/coffee-can-1-mobile.png"
+                    srcset="img/slider/coffee-can-1-mobile@2x.png 2x"
+                    width="280"
+                    height="280"
+                    alt="Кофе Декаф Флэт Уайтю"
+                  />
+                </picture>
+                <div class="promo__info">
+                  <h4 class="promo__hint title title--smallest">Новинка!</h4>
+                  <h3 class="promo__title title">Декаф Флэт Уайт</h3>
+                  <p class="promo__description">Свежесваренный      кофе без кофеина из Эфиопии
+                    с&nbsp;натуральным фермерским молоком — то, что нужно
+                    для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                  <div class="promo__order-wrapper">
+                    <span class="promo__old-price">295₽</span>
+                    <span class="promo__current-price">225₽</span>
+                    <button class="promo__button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="promo__slide promo__slide--latte swiper-slide">
+              <div class="promo__slide-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/slider/coffee-can-2-desktop.png 1x,
+                    img/slider/coffee-can-2-desktop@2x.png 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/slider/coffee-can-2-tablet.png 1x,
+                    img/slider/coffee-can-2-tablet@2x.png 2x"
+                  />
+                  <img
+                    class="promo__img"
+                    src="img/slider/coffee-can-2-mobile.png"
+                    srcset="img/slider/coffee-can-2-mobile@2x.png 2x"
+                    width="280"
+                    height="280"
+                    alt="Кофе Декаф Флэт Уайтю"
+                  />
+                </picture>
+                <div class="promo__info">
+                  <h4 class="promo__hint title title--smallest">Новинка!</h4>
+                  <h3 class="promo__title title">Лавандовый Латте</h3>
+                  <p class="promo__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                  <div class="promo__order-wrapper">
+                    <span class="promo__old-price">285₽</span>
+                    <span class="promo__current-price">265₽</span>
+                    <button class="promo__button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="promo__slide promo__slide--espresso swiper-slide">
+              <div class="promo__slide-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/slider/coffee-can-3-desktop.png 1x,
+                    img/slider/coffee-can-3-desktop@2x.png 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/slider/coffee-can-3-tablet.png 1x,
+                    img/slider/coffee-can-3-tablet@2x.png 2x"
+                  />
+                  <img
+                    class="promo__img"
+                    src="img/slider/coffee-can-3-mobile.png"
+                    srcset="img/slider/coffee-can-3-mobile@2x.png 2x"
+                    width="280"
+                    height="280"
+                    alt="Кофе Декаф Флэт Уайтю"
+                  />
+                </picture>
+                <div class="promo__info">
+                  <h4 class="promo__hint title title--smallest">Новинка!</h4>
+                  <h3 class="promo__title title">Тройной Эспрессо</h3>
+                  <p class="promo__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <div class="promo__order-wrapper">
+                    <span class="promo__old-price">395₽</span>
+                    <span class="promo__current-price">375₽</span>
+                    <button class="promo__button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="promo__slider-pagination swiper-pagination"></div>
+          <div class="promo__slider-button-prev swiper-button-prev"></div>
+          <div class="promo__slider-button-next swiper-button-next"></div>
+        </div>
       </section>
       <section class="advantages">
         <div class="container">
@@ -576,6 +691,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./vendor/leaflet/leaflet.js"></script>
     <script src="./js/script.js"></script>
   </body>
