@@ -28,11 +28,13 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     order: -1;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
     align-items: flex-start;
     width: 625px;
+    padding-bottom: 6px;
   }
 }
 
@@ -42,7 +44,6 @@
 
 .promo__title {
   margin-bottom: 10px;
-  line-height: 48px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
@@ -135,4 +136,3 @@
     min-height: 714px;
   }
 }
-

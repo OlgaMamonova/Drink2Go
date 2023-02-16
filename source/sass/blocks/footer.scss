@@ -20,7 +20,9 @@
 }
 
 .footer__wrapper {
+  width: 320px;
   padding: 20px;
+  margin: 0 auto;
   border-bottom: 1px solid $secondary;
 
   @media (min-width: $tablet-width) {
@@ -90,15 +92,22 @@
 
   @media (min-width: $desktop-width) {
     display: inline-block;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 20px;
     color: $black;
   }
 }
 
 .footer__title {
   text-align: left;
+  font-size: 14px;
+  line-height: 20px;
   margin-bottom: 12px;
+  text-transform: capitalize;
+
+  &--address {
+    margin-bottom: 19px;
+  }
 }
 
 .footer__list {
@@ -108,12 +117,15 @@
 }
 
 .footer__list-link {
+  display: inline-block;
   font-size: 12px;
   line-height: 16px;
+  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   color: $black;
   padding: 8px 0;
+  letter-spacing: 0.2px;
 
   &:focus-visible,
   &:hover {
