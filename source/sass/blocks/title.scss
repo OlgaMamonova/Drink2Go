@@ -19,4 +19,11 @@
       line-height: 36px;
     }
   }
+
+  &--smallest {
+    color: $primary;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
 }
