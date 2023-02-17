@@ -3,7 +3,7 @@ const initBurger = () => {
   const burgerToggle = header.querySelector('.header__burger-toggle');
   const headerNav = header.querySelector('.header__nav');
 
-  const onHeaderLinkClick = (evt) => {
+  const onHeaderNavLinkClick = (evt) => {
     if (evt.target.nodeName === 'A') {
       closeMenu();
     }
@@ -16,7 +16,7 @@ const initBurger = () => {
     let burgerCloseButton = document.querySelector('.header__burger-toggle--menu-opened');
 
     burgerCloseButton.addEventListener('click', closeMenu);
-    header.addEventListener('click', onHeaderLinkClick);
+    headerNav.addEventListener('click', onHeaderNavLinkClick);
   }
 
   function closeMenu () {
@@ -25,14 +25,16 @@ const initBurger = () => {
     headerNav.classList.remove('header__nav--menu-opened');
     burgerCloseButton.classList.remove('header__burger-toggle--menu-opened');
     burgerCloseButton.removeEventListener('click', closeMenu);
-    header.removeEventListener('click', onHeaderLinkClick);
+    headerNav.removeEventListener('click', onHeaderNavLinkClick);
   }
 
   burgerToggle.addEventListener('click', openMenu);
 }
 
 const initMap = () => {
-  const map = L.map('map')
+  const map = L.map('map', {
+    scrollWheelZoom: false
+  })
     .setView({
       lat: 59.96831,
       lng: 30.31748
@@ -71,7 +73,7 @@ const initSlider = () => {
       prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.promo__slider-pagination',
       clickable: true,
     },
   });

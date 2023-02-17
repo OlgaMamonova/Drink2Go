@@ -20,14 +20,20 @@
 }
 
 .footer__wrapper {
-  width: 320px;
-  padding: 20px;
-  margin: 0 auto;
+  padding: 20px 0;
   border-bottom: 1px solid $secondary;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     border-bottom: none;
+  }
+}
+
+.footer__mobile-content-container {
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+    padding: 0 20px;
+    margin: 0 auto;
   }
 }
 

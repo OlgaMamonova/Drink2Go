@@ -136,3 +136,25 @@
     min-height: 714px;
   }
 }
+
+
+.promo__slider-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
+
+.promo__slider .swiper-pagination-bullet {
+  width: 62px;
+  height: 2px;
+  background-color: $white;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.promo__slider .swiper-pagination-bullet-active {
+  background-color: $primary;
+}
