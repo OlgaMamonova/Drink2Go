@@ -93,7 +93,9 @@
     background-color: $flat-white;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-      background-image: linear-gradient( $flat-white 77.3%, $white 77.3%);
+      background-image: linear-gradient(
+        $flat-white 77.3%,
+        $white 77.3%);
     }
   }
 
@@ -101,7 +103,7 @@
     background-color: $lavender-latte;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-      background-image: linear-gradient( $lavender-latte 77.3%, $white 77.3%);
+      background-image: linear-gradient($lavender-latte 77.3%, $white 77.3%);
     }
   }
 
@@ -109,7 +111,7 @@
     background-color: $grey;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-      background-image: linear-gradient( $grey 77.3%, $white 77.3%);
+      background-image: linear-gradient($grey 77.3%, $white 77.3%);
     }
   }
 }
@@ -179,7 +181,7 @@
 
     &:focus,
     &:hover {
-      background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
       outline: none;
     }
 
@@ -193,7 +195,7 @@
 
     &:focus,
     &:hover {
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
       outline: none;
     }
 
