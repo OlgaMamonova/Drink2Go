@@ -1,20 +1,31 @@
 const initBurger = () => {
-  const burgerToggle = document.querySelector('.header__burger-toggle');
-  const headerNav = document.querySelector('.header__nav');
+  const header = document.querySelector('.header');
+  const burgerToggle = header.querySelector('.header__burger-toggle');
+  const headerNav = header.querySelector('.header__nav');
 
+  const onHeaderLinkClick = (evt) => {
+    if (evt.target.nodeName === 'A') {
+      closeMenu();
+    }
+  }
 
   const openMenu = () => {
-    burgerToggle.classList.add('header__burger-toggle--menu-opened');
     headerNav.classList.add('header__nav--menu-opened');
+    burgerToggle.classList.add('header__burger-toggle--menu-opened');
 
     let burgerCloseButton = document.querySelector('.header__burger-toggle--menu-opened');
+
     burgerCloseButton.addEventListener('click', closeMenu);
+    header.addEventListener('click', onHeaderLinkClick);
   }
 
   function closeMenu () {
-    burgerToggle.classList.remove('header__burger-toggle--menu-opened');
+    let burgerCloseButton = document.querySelector('.header__burger-toggle--menu-opened');
+
     headerNav.classList.remove('header__nav--menu-opened');
+    burgerCloseButton.classList.remove('header__burger-toggle--menu-opened');
     burgerCloseButton.removeEventListener('click', closeMenu);
+    header.removeEventListener('click', onHeaderLinkClick);
   }
 
   burgerToggle.addEventListener('click', openMenu);
