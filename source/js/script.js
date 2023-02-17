@@ -69,8 +69,8 @@ const initMap = () => {
 const initSlider = () => {
   new Swiper('.promo__slider', {
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.promo__slider-button--next',
+      prevEl: '.promo__slider-button--prev',
     },
     pagination: {
       el: '.promo__slider-pagination',
