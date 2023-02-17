@@ -65,8 +65,6 @@
   &--menu-opened {
     display: block;
     width: 100%;
-    padding: 20px;
-    margin: 0 auto;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -84,8 +82,6 @@
   @include list-style;
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -96,6 +92,16 @@
 
   @media (min-width: $desktop-width) {
     width: 500px;
+  }
+}
+
+.header__nav-item {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $secondary;
+
+    &:last-of-type {
+      border-bottom: 1px solid $secondary;
+    }
   }
 }
 
@@ -110,14 +116,15 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
-  color: $black;
+  color: #d6d6d6;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 20px 0 21px;
+  padding: 20px 20px 21px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     display: inline-block;
+    color: $black;
     padding: 31px 21px;
     width: fit-content;
 
@@ -128,13 +135,28 @@
 
   &:hover,
   &:focus-visible {
-    color: $primary;
-    outline: none;
+    @media (min-width: $tablet-width) {
+      color: $primary;
+      outline: none;
+    }
   }
 
   &:active {
-    color: $primary;
+    color: $black;
     background-color: $secondary;
+
+    @media (min-width: $tablet-width) {
+      color: $primary;
+      border-bottom: 2px solid $secondary;
+    }
+  }
+}
+
+.header__nav-link-content {
+  @media (max-width: $mobile-width-only) {
+    display: inline-block;
+    width: 320px;
+    margin: 0 auto;
   }
 }
 
