@@ -1,21 +1,31 @@
 export const initBurger = () => {
-  const burgerToggle = document.querySelector('.header__burger-toggle');
-  const headerNav = document.querySelector('.header__nav');
+  const header = document.querySelector('.header');
+  const burgerToggle = header.querySelector('.header__burger-toggle');
+  const headerNav = header.querySelector('.header__nav');
 
+  const onHeaderNavLinkClick = (evt) => {
+    if (evt.target.nodeName === 'SPAN') {
+      closeMenu();
+    }
+  }
 
   const openMenu = () => {
-    burgerToggle.classList.add('header__burger-toggle--menu-opened');
     headerNav.classList.add('header__nav--menu-opened');
+    burgerToggle.classList.add('header__burger-toggle--menu-opened');
 
     let burgerCloseButton = document.querySelector('.header__burger-toggle--menu-opened');
+
     burgerCloseButton.addEventListener('click', closeMenu);
+    headerNav.addEventListener('click', onHeaderNavLinkClick);
   }
 
   function closeMenu () {
-    burgerToggle.classList.remove('header__burger-toggle--menu-opened');
+    let burgerCloseButton = document.querySelector('.header__burger-toggle--menu-opened');
+
     headerNav.classList.remove('header__nav--menu-opened');
+    burgerCloseButton.classList.remove('header__burger-toggle--menu-opened');
     burgerCloseButton.removeEventListener('click', closeMenu);
-    burgerToggle.addEventListener('click', openMenu);
+    headerNav.removeEventListener('click', onHeaderNavLinkClick);
   }
 
   burgerToggle.addEventListener('click', openMenu);

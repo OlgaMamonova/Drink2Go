@@ -1,0 +1,32 @@
+.social {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 160px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 318px;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: $grey;
+
+  &:focus-visible,
+  &:hover {
+    color: $primary;
+    background-color: $secondary;
+    outline: none;
+  }
+
+  &:active {
+    color: $primary;
+    background-color: $primary-lightest;
+  }
+}

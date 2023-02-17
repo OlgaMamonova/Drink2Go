@@ -1,0 +1,222 @@
+.promo__img {
+  display: block;
+  margin-bottom: 10px;
+  max-width: fit-content;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+.promo__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+    width: 625px;
+    padding-bottom: 6px;
+  }
+}
+
+.promo__hint {
+  margin-bottom: 4px;
+}
+
+.promo__title {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.promo__description {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.promo__order-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.promo__old-price {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: line-through;
+  color: $primary;
+  margin-right: 6px;
+}
+
+.promo__current-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.promo__slide {
+  &--flat-white {
+    background-color: $flat-white;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      background-image: linear-gradient(
+        $flat-white 77.3%,
+        $white 77.3%);
+    }
+  }
+
+  &--latte {
+    background-color: $lavender-latte;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      background-image: linear-gradient($lavender-latte 77.3%, $white 77.3%);
+    }
+  }
+
+  &--espresso {
+    background-color: $grey;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      background-image: linear-gradient($grey 77.3%, $white 77.3%);
+    }
+  }
+}
+
+.promo__slide-wrapper {
+  width: 320px;
+  min-height: 656px;
+  padding: 20px 20px 60px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 80px 0 80px;
+    min-height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 30px 80px 84px 105px;
+    flex-direction: row;
+    align-items: center;
+    min-height: 714px;
+  }
+}
+
+.promo__slider-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
+
+.promo__slider .swiper-pagination-bullet {
+  width: 62px;
+  height: 2px;
+  background-color: $white;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.promo__slider .swiper-pagination-bullet-active {
+  background-color: $primary;
+}
+
+.promo__wrapper {
+  position: relative;
+}
+
+.promo__slider-button {
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  color: $primary;
+  z-index: 2;
+
+  &--prev {
+    left: 0;
+
+    &:focus,
+    &:hover {
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      outline: none;
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    &:focus,
+    &:hover {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+      outline: none;
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+    }
+  }
+
+  &:disabled {
+    color: $grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    display: block;
+    text-align: center;
+    padding-top: 310px;
+  }
+}

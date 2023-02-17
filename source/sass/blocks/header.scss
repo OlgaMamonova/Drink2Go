@@ -13,22 +13,24 @@
 .header__logo-link {
   display: block;
 
+  &:hover,
+  &:focus-visible {
+    opacity: 0.9;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
   @media (min-width: $tablet-width) {
     margin-right: 67px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 20px;
-  }
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.8;
-    outline: none;
-  }
-
-  &:active {
-    opacity: 0.6;
+    text-decoration: none;
+    display: flex;
+    margin-right: 162px;
   }
 }
 
@@ -41,6 +43,7 @@
 
   @media (min-width: $desktop-width) {
     width: 170px;
+    margin-right: 20px;
   }
 }
 
@@ -52,7 +55,7 @@
     width: 126px;
     font-size: 12px;
     line-height: 16px;
-    margin-right: 162px;
+    color: $black;
   }
 }
 
@@ -62,13 +65,11 @@
   &--menu-opened {
     display: block;
     width: 100%;
-    padding: 20px;
-    margin: 0 auto;
     position: absolute;
     left: 0;
     bottom: 0;
     transform: translateY(100%);
-    z-index: 1;
+    z-index: 2;
     background-color: $white;
   }
 
@@ -81,8 +82,6 @@
   @include list-style;
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -96,33 +95,68 @@
   }
 }
 
+.header__nav-item {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $secondary;
+
+    &:last-of-type {
+      border-bottom: 1px solid $secondary;
+    }
+  }
+}
+
+.header__nav-item:not(:last-of-type) {
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
 .header__nav-link {
   display: block;
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
-  color: $black;
+  color: #d6d6d6;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 20px 0 21px;
+  padding: 20px 20px 21px;
   text-align: center;
-
 
   @media (min-width: $tablet-width) {
     display: inline-block;
-    padding: 32px 21px;
+    color: $black;
+    padding: 31px 21px;
     width: fit-content;
+
+    &--current {
+      border-bottom: 2px solid $primary;
+    }
   }
 
   &:hover,
   &:focus-visible {
-    color: $primary;
-    outline: none;
+    @media (min-width: $tablet-width) {
+      color: $primary;
+      outline: none;
+    }
   }
 
   &:active {
-    color: $primary;
+    color: $black;
     background-color: $secondary;
+
+    @media (min-width: $tablet-width) {
+      color: $primary;
+      border-bottom: 2px solid $secondary;
+    }
+  }
+}
+
+.header__nav-link-content {
+  @media (max-width: $mobile-width-only) {
+    display: inline-block;
+    width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -135,6 +169,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.header__user-nav-item:not(:last-of-type) {
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
 }
 
 .header__user-nav-link {
