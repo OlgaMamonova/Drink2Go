@@ -136,6 +136,7 @@
   &:focus-visible,
   &:hover {
     color: $primary-lighter;
+    outline: none;
   }
 
   &:active {
@@ -159,6 +160,16 @@
 
   &--phone {
     background-image: url("../../img/background/phone.svg");
+
+    &:focus,
+    &:hover {
+      color: $primary;
+      outline: none;
+    }
+
+    &:active {
+      color: $primary-darker;
+    }
   }
 }
 
@@ -178,6 +189,7 @@
   &:focus-visible,
   &:hover {
     color: $primary;
+    outline: none;
   }
 
   &:active {

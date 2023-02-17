@@ -12,6 +12,19 @@
 .product-card__link {
   color: $black;
   text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.product-card__link:focus .product-card__title,
+.product-card__link:hover .product-card__title {
+  color: $primary;
+}
+
+.product-card__link:active .product-card__title {
+  color: $primary-darker;
 }
 
 .product-card__img {
